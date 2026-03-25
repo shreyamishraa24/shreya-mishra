@@ -3,53 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shreya Mishra ✨</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <title>Shreya Mishra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --pink:       #f5c6d8;
-      --pink-deep:  #d4879f;
-      --pink-light: #fdeef4;
-      --pink-soft:  #fef6f9;
-      --blush:      #f5c6d8;
-      --lavender:   #e8d5f0;
-      --mint:       #d8ede8;
-      --peach:      #f7ddc8;
-      --cream:      #fdf8f8;
-      --text:       #5a3a48;
-      --muted:      #b094a0;
-      --border:     #f0d8e4;
-      --white:      #ffffff;
-      --radius:     16px;
-      --radius-lg:  28px;
+      --bg:       #f7f0eb;
+      --white:    #fdfaf8;
+      --rose:     #c2847a;
+      --rose-lt:  #edddd9;
+      --mauve:    #9e7b7b;
+      --text:     #3d2b2b;
+      --muted:    #9e8484;
+      --border:   #e8d8d4;
+      --radius:   14px;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
       font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.65;
-      overflow-x: hidden;
+      line-height: 1.7;
     }
 
-    /* ── BLOBS / BG DECO ── */
-    .blob {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(100px);
-      opacity: 0.18;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .blob-1 { width: 500px; height: 500px; background: #f9a8d4; top: -150px; right: -100px; }
-    .blob-2 { width: 400px; height: 400px; background: #e9d5ff; bottom: 10%; left: -120px; }
-    .blob-3 { width: 300px; height: 300px; background: #fed7aa; top: 40%; right: 10%; }
-
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -57,746 +37,531 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 6vw;
-      background: rgba(255,248,246,0.82);
-      backdrop-filter: blur(16px);
+      padding: 1.1rem 8vw;
+      background: rgba(247,240,235,0.9);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 1.3rem;
-      color: var(--pink-deep);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      color: var(--text);
+      letter-spacing: 0.02em;
     }
 
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.88rem;
+      font-size: 0.82rem;
       font-weight: 500;
+      letter-spacing: 0.04em;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--pink-deep); }
+    .nav-links a:hover { color: var(--rose); }
 
-    /* ── HERO ── */
+    /* HERO */
     #hero {
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 7rem 6vw 4rem;
-      position: relative;
-      z-index: 1;
+      padding: 8rem 8vw 5rem;
     }
 
-    .hero-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 640px;
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--pink-light);
-      border: 1px solid var(--blush);
-      border-radius: 100px;
-      padding: 0.35rem 1rem;
-      font-size: 0.78rem;
-      color: var(--pink-deep);
-      font-weight: 600;
-      margin-bottom: 2rem;
-      letter-spacing: 0.02em;
-    }
-    .hero-pill .dot { width: 6px; height: 6px; background: var(--pink-deep); border-radius: 50%; }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 7vw, 5.5rem);
-      font-weight: 700;
-      line-height: 1.1;
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rose);
       margin-bottom: 1.5rem;
     }
 
-    .pink-text {
-      color: var(--pink-deep);
-      font-style: italic;
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-weight: 600;
+      line-height: 1.05;
+      color: var(--text);
+      margin-bottom: 1.5rem;
     }
 
-    .hero-sub {
-      font-size: 1rem;
+    h1 em { font-style: italic; color: var(--rose); }
+
+    .hero-desc {
+      font-size: 0.95rem;
       color: var(--muted);
-      max-width: 400px;
+      max-width: 380px;
       margin-bottom: 2.5rem;
       font-weight: 400;
     }
 
-    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.6rem;
-      border-radius: 100px;
-      font-size: 0.88rem;
-      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
       text-decoration: none;
-      transition: all 0.22s;
+      padding: 0.7rem 1.6rem;
+      border-radius: 100px;
+      transition: all 0.2s;
       border: none;
       cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
     }
-    .btn-primary {
-      background: linear-gradient(135deg, #f0b8cc, #d4879f);
+    .btn-fill {
+      background: var(--rose);
       color: #fff;
-      box-shadow: 0 4px 20px rgba(212,135,159,0.25);
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(212,135,159,0.35); }
-    .btn-ghost {
-      background: var(--white);
-      color: var(--pink-deep);
-      border: 1.5px solid var(--blush);
+    .btn-fill:hover { background: var(--mauve); }
+    .btn-outline {
+      background: transparent;
+      color: var(--rose);
+      border: 1px solid var(--rose);
     }
-    .btn-ghost:hover { border-color: var(--pink-deep); background: var(--pink-light); }
+    .btn-outline:hover { background: var(--rose-lt); }
 
-    .hero-card { display: none; }
+    /* DIVIDER */
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--border);
+      margin: 0 auto 3rem;
+    }
 
-    /* ── SECTION SHARED ── */
-    section { padding: 5.5rem 6vw; position: relative; z-index: 1; }
+    /* SECTIONS */
+    section { padding: 5rem 8vw; }
 
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
+    .section-header { margin-bottom: 2.5rem; }
+    .section-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--pink-deep);
-      background: var(--pink-light);
-      border: 1px solid var(--blush);
-      padding: 0.3rem 0.8rem;
-      border-radius: 100px;
-      margin-bottom: 1rem;
+      color: var(--rose);
+      margin-bottom: 0.5rem;
     }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      font-weight: 700;
-      margin-bottom: 0.75rem;
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 600;
       line-height: 1.2;
     }
+    h2 em { font-style: italic; color: var(--rose); }
 
-    .section-desc {
-      color: var(--muted);
-      max-width: 500px;
-      margin-bottom: 3rem;
-      font-size: 0.95rem;
-    }
-
-    /* ── ABOUT ── */
+    /* ABOUT */
     #about {
       background: var(--white);
-      border-radius: 36px;
-      margin: 0 3vw;
-      padding: 5rem 5vw;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      max-width: 900px;
     }
 
-    .about-text p { color: var(--muted); margin-bottom: 1rem; font-size: 0.95rem; }
+    .about-text p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 1rem;
+    }
 
-    .fun-facts {
+    .about-details { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.5rem; }
+    .detail-row {
       display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-    }
-
-    .fun-fact {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      background: var(--pink-soft);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 0.75rem 1rem;
-      font-size: 0.875rem;
-      color: var(--text);
-    }
-    .fun-fact span:first-child { font-size: 1.1rem; }
-
-    .stat-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
-      margin-top: 2rem;
+      font-size: 0.82rem;
     }
+    .detail-row .label {
+      color: var(--muted);
+      min-width: 80px;
+      font-weight: 500;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding-top: 0.1rem;
+    }
+    .detail-row .value { color: var(--text); }
 
-    .stat-box {
-      background: var(--pink-soft);
+    .about-side { display: flex; flex-direction: column; gap: 1rem; }
+
+    .info-block {
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.25rem;
-      text-align: center;
     }
-    .stat-box strong {
-      display: block;
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--pink-deep);
-    }
-    .stat-box span { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
-
-    .about-visual-side { display: flex; flex-direction: column; gap: 1rem; }
-
-    .vcard {
-      background: var(--pink-soft);
-      border: 1.5px solid var(--border);
-      border-radius: 20px;
-      padding: 1.5rem;
-    }
-    .vcard-title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.75rem; }
-    .vcard-body { font-size: 0.875rem; color: var(--text); }
-
-    .interest-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .itag {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 0.3rem 0.75rem;
-      font-size: 0.78rem;
+    .info-block-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: var(--muted);
+      margin-bottom: 0.6rem;
     }
+    .info-block p { font-size: 0.82rem; color: var(--text); }
 
-    /* ── SKILLS ── */
-    #skills { background: var(--cream); }
+    /* WORK — skills + projects merged */
+    #work { background: var(--bg); }
 
-    .skills-grid {
+    .work-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.25rem;
+      max-width: 1000px;
     }
 
-    .skill-card {
+    .card {
       background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem;
-      transition: transform 0.22s, box-shadow 0.22s;
-    }
-    .skill-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 36px rgba(249,168,212,0.22);
-    }
-
-    .skill-icon-wrap {
-      width: 48px; height: 48px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-    .icon-pink { background: var(--pink-light); }
-    .icon-lav  { background: var(--lavender); }
-    .icon-mint { background: var(--mint); }
-    .icon-peach{ background: var(--peach); }
-
-    .skill-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
-    .skill-card p  { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.75rem; }
-
-    .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-    .tag {
-      background: var(--pink-soft);
       border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(194,132,122,0.12);
+    }
+
+    .card-type {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.6rem;
+    }
+
+    .card h3 { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.4rem; }
+    .card p  { font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem; }
+
+    .card-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .ctag {
+      background: var(--rose-lt);
+      color: var(--mauve);
       border-radius: 100px;
-      padding: 0.18rem 0.55rem;
-      font-size: 0.7rem;
-      color: var(--muted);
+      padding: 0.15rem 0.55rem;
+      font-size: 0.68rem;
       font-weight: 500;
     }
 
-    /* ── PROJECTS ── */
-    #projects {
-      background: var(--white);
-      border-radius: 36px;
-      margin: 0 3vw;
-      padding: 5rem 5vw;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      transition: transform 0.22s, box-shadow 0.22s;
-      background: var(--cream);
-    }
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 36px rgba(249,168,212,0.22);
-    }
-
-    .project-banner {
-      height: 130px;
-      display: flex;
+    .card-link {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-    }
-    .banner-pink    { background: linear-gradient(135deg, #fce7f3, #fbcfe8); }
-    .banner-lav     { background: linear-gradient(135deg, #ede9fe, #e9d5ff); }
-    .banner-peach   { background: linear-gradient(135deg, #fef3c7, #fed7aa); }
-
-    .project-body { padding: 1.5rem; }
-    .project-body h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
-    .project-body p  { color: var(--muted); font-size: 0.83rem; margin-bottom: 1rem; }
-
-    .project-links { display: flex; gap: 0.75rem; }
-    .plink {
+      gap: 0.3rem;
       font-size: 0.78rem;
-      color: var(--pink-deep);
+      color: var(--rose);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
+      margin-top: 0.75rem;
+    }
+    .card-link:hover { text-decoration: underline; }
+
+    /* EXPERIENCE */
+    #experience {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-list { display: flex; flex-direction: column; gap: 0; max-width: 680px; }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 2rem;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .exp-item:last-child { border-bottom: none; }
+
+    .exp-date { font-size: 0.75rem; color: var(--muted); padding-top: 0.15rem; }
+    .exp-role { font-size: 0.92rem; font-weight: 500; margin-bottom: 0.2rem; }
+    .exp-org  { font-size: 0.78rem; color: var(--rose); margin-bottom: 0.5rem; }
+    .exp-desc { font-size: 0.82rem; color: var(--muted); }
+
+    /* CONTACT */
+    #contact { background: var(--bg); text-align: center; }
+
+    .contact-inner { max-width: 460px; margin: 0 auto; }
+    .contact-inner > p { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
+
+    .contact-links { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+
+    .clink {
       display: flex;
       align-items: center;
-      gap: 0.25rem;
-    }
-    .plink:hover { text-decoration: underline; }
-
-    /* ── EXPERIENCE ── */
-    #experience { background: var(--cream); }
-
-    .timeline { display: flex; flex-direction: column; gap: 1.25rem; max-width: 720px; }
-
-    .tl-item {
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem 1.5rem 1.5rem 2rem;
-      position: relative;
-    }
-    .tl-item::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 4px;
-      background: linear-gradient(to bottom, #f5c6d8, #d8b4e8);
-      border-radius: 4px 0 0 4px;
-    }
-
-    .tl-meta {
-      display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 0.4rem;
-    }
-    .tl-item h3 { font-size: 0.95rem; font-weight: 600; }
-    .tl-org { color: var(--pink-deep); font-size: 0.82rem; font-weight: 600; margin-top: 0.1rem; }
-    .tl-date {
-      font-size: 0.72rem;
-      color: var(--muted);
-      background: var(--pink-soft);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 0.18rem 0.65rem;
-      white-space: nowrap;
-    }
-    .tl-item p { color: var(--muted); font-size: 0.83rem; margin-top: 0.5rem; }
-
-    /* ── CONTACT ── */
-    #contact {
       background: var(--white);
-      border-radius: 36px;
-      margin: 0 3vw 4rem;
-      padding: 5rem 5vw;
-      text-align: center;
-    }
-
-    .contact-card {
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    .contact-card > p {
-      color: var(--muted);
-      margin-bottom: 2.5rem;
-      font-size: 0.95rem;
-    }
-
-    .contact-options { display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2rem; }
-
-    .co {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: var(--pink-soft);
-      border: 1.5px solid var(--border);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1rem 1.25rem;
+      padding: 0.9rem 1.25rem;
       text-decoration: none;
       color: var(--text);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 500;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s;
     }
-    .co:hover { border-color: var(--pink-deep); box-shadow: 0 4px 16px rgba(236,72,153,0.12); }
-    .co-icon { font-size: 1.25rem; }
-    .co-label { color: var(--muted); font-size: 0.72rem; font-weight: 500; margin-left: auto; }
+    .clink:hover { border-color: var(--rose); }
+    .clink-label { font-size: 0.7rem; color: var(--muted); }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 1.75rem;
       border-top: 1px solid var(--border);
+      font-size: 0.75rem;
       color: var(--muted);
-      font-size: 0.78rem;
     }
-    footer span { color: var(--pink-deep); }
 
-    /* ── SCROLLBAR ── */
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: var(--cream); }
-    ::-webkit-scrollbar-thumb { background: var(--blush); border-radius: 10px; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-card { display: none; }
-      .about-grid { grid-template-columns: 1fr; }
-      .stat-row { grid-template-columns: repeat(2, 1fr); }
-      #about, #projects, #contact { margin: 0; border-radius: 0; }
-      nav { padding: 1rem 4vw; }
+    @media (max-width: 700px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .exp-item { grid-template-columns: 1fr; gap: 0.25rem; }
       .nav-links { gap: 1.2rem; }
+      nav { padding: 1rem 5vw; }
+      section { padding: 4rem 5vw; }
     }
   </style>
 </head>
 <body>
-
-<div class="blob blob-1"></div>
-<div class="blob blob-2"></div>
-<div class="blob blob-3"></div>
 
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Shreya Mishra</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#work">Work</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Let's Talk</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-inner">
-    <h1>Shreya<br/><span class="pink-text">Mishra</span></h1>
-    <p class="hero-sub">
-      Marketing student. Brand lover. Content creator. I make brands look as good as they perform.
-    </p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">See My Work ✦</a>
-      <a href="#contact" class="btn btn-ghost">Say Hello 💌</a>
-    </div>
+  <p class="eyebrow">Content Creator · Digital Marketer</p>
+  <h1>Shreya<br/><em>Mishra</em></h1>
+  <p class="hero-desc">BBA graduate with a passion for content, brands, and storytelling that connects.</p>
+  <div class="hero-btns">
+    <a href="#work" class="btn btn-fill">View My Work</a>
+    <a href="#contact" class="btn btn-outline">Get in Touch</a>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section style="padding: 0 0 5.5rem; position:relative; z-index:1;">
-<div id="about">
-  <div class="section-label">✦ About Me</div>
+<section id="about">
   <div class="about-grid">
     <div class="about-text">
-      <h2 class="section-title">Marketing meets <span class="pink-text">aesthetics</span></h2>
-      <p>I'm a final-year BBA student with a passion for digital marketing, brand building, and creating content that makes people stop scrolling. I believe that great marketing isn't just about selling — it's about storytelling.</p>
-      <p>I geek out over consumer psychology, Instagram aesthetics, and figuring out why some campaigns go viral while others don't. If there's a trend, I've probably already analysed it.</p>
-
-      <div class="fun-facts">
-        <div class="fun-fact"><span>🎓</span> BBA, Major in Marketing — Class of 2025</div>
-        <div class="fun-fact"><span>📍</span> India</div>
-        <div class="fun-fact"><span>✨</span> Aesthetic obsessed — everything must be pink & pretty</div>
-        <div class="fun-fact"><span>☕</span> Iced coffee & canva open at all times</div>
+      <div class="section-header">
+        <div class="section-tag">About</div>
+        <h2>A little about <em>me</em></h2>
       </div>
+      <p>I'm a final-year BBA student specialising in Marketing, with hands-on experience in content creation, social media strategy, and brand communication.</p>
+      <p>I love building brand voices that feel human, designing content calendars that actually work, and understanding what makes audiences engage. I'm detail-oriented, creative, and a fast learner.</p>
 
-      <div class="stat-row">
-        <div class="stat-box"><strong>15+</strong><span>Campaigns Managed</span></div>
-        <div class="stat-box"><strong>3</strong><span>Internships</span></div>
-        <div class="stat-box"><strong>∞</strong><span>Ideas per Day</span></div>
+      <div class="about-details">
+        <div class="detail-row">
+          <span class="label">Degree</span>
+          <span class="value">BBA — Marketing, Class of 2025</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Based in</span>
+          <span class="value">India</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Looking for</span>
+          <span class="value">Assistant / Marketing roles</span>
+        </div>
       </div>
     </div>
 
-    <div class="about-visual-side">
-      <div class="vcard">
-        <div class="vcard-title">🌷 Interests & Passions</div>
-        <div class="interest-tags">
-          <span class="itag">Digital Marketing</span>
-          <span class="itag">Brand Identity</span>
-          <span class="itag">Content Creation</span>
-          <span class="itag">Social Media Strategy</span>
-          <span class="itag">Influencer Marketing</span>
-          <span class="itag">Consumer Psychology</span>
-          <span class="itag">Aesthetic Design</span>
-          <span class="itag">Market Research</span>
-          <span class="itag">SEO & SEM</span>
-          <span class="itag">Email Marketing</span>
-        </div>
+    <div class="about-side">
+      <div class="info-block">
+        <div class="info-block-label">What I do well</div>
+        <p>Content writing, social media management, brand research, campaign coordination, and keeping things organised.</p>
       </div>
-
-      <div class="vcard">
-        <div class="vcard-title">🎀 Currently</div>
-        <div class="vcard-body">
-          Completing my final year project on <strong>Gen Z buying behaviour</strong> in the D2C space. Open to marketing internships & full-time roles.
-        </div>
+      <div class="info-block">
+        <div class="info-block-label">Tools I use</div>
+        <p>Canva · Notion · Meta Ads · Google Analytics · Mailchimp · MS Office</p>
       </div>
-
-      <div class="vcard">
-        <div class="vcard-title">💿 Tools I Use Daily</div>
-        <div class="interest-tags">
-          <span class="itag">Canva</span>
-          <span class="itag">Meta Ads</span>
-          <span class="itag">Google Ads</span>
-          <span class="itag">HubSpot</span>
-          <span class="itag">Notion</span>
-          <span class="itag">Mailchimp</span>
-        </div>
+      <div class="info-block">
+        <div class="info-block-label">Soft skills</div>
+        <p>Reliable, communicative, creative thinker, quick to adapt, strong attention to detail.</p>
       </div>
     </div>
   </div>
-</div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="section-label">✦ Skills</div>
-  <h2 class="section-title">What I bring to the table</h2>
-  <p class="section-desc">From crafting scroll-stopping content to reading data dashboards — here's my toolkit.</p>
+<!-- WORK -->
+<section id="work">
+  <div class="section-header">
+    <div class="section-tag">Skills & Projects</div>
+    <h2>My <em>work</em></h2>
+  </div>
 
-  <div class="skills-grid">
-    <div class="skill-card">
-      <div class="skill-icon-wrap icon-pink">📱</div>
-      <h3>Social Media Marketing</h3>
-      <p>Growing brand presence across platforms with strategy, storytelling, and trend-savvy content.</p>
-      <div class="tags">
-        <span class="tag">Instagram</span><span class="tag">LinkedIn</span>
-        <span class="tag">Reels</span><span class="tag">Community Mgmt</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon-wrap icon-lav">✍🏼</div>
+  <div class="work-grid">
+    <div class="card">
+      <div class="card-type">Skill</div>
       <h3>Content Creation</h3>
-      <p>Writing copy and creating visuals that are on-brand, aesthetic, and built to convert.</p>
-      <div class="tags">
-        <span class="tag">Copywriting</span><span class="tag">Canva</span>
-        <span class="tag">Blog Writing</span><span class="tag">Email Copy</span>
+      <p>Writing captions, blogs, newsletters, and scripts. Creating visuals on Canva that match the brand aesthetic.</p>
+      <div class="card-tags">
+        <span class="ctag">Copywriting</span>
+        <span class="ctag">Canva</span>
+        <span class="ctag">Reels</span>
+        <span class="ctag">Carousels</span>
       </div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon-wrap icon-mint">📊</div>
-      <h3>SEO & Analytics</h3>
-      <p>Understanding what works by diving into the data — keywords, rankings, traffic, and conversions.</p>
-      <div class="tags">
-        <span class="tag">Google Analytics</span><span class="tag">SEO</span>
-        <span class="tag">Keyword Research</span><span class="tag">GA4</span>
+    <div class="card">
+      <div class="card-type">Skill</div>
+      <h3>Social Media Management</h3>
+      <p>Planning and scheduling content, growing accounts, and engaging with audiences across Instagram and LinkedIn.</p>
+      <div class="card-tags">
+        <span class="ctag">Instagram</span>
+        <span class="ctag">LinkedIn</span>
+        <span class="ctag">Content Calendar</span>
+        <span class="ctag">Analytics</span>
       </div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon-wrap icon-peach">🎯</div>
-      <h3>Paid Advertising</h3>
-      <p>Running targeted ad campaigns that reach the right audience without wasting the budget.</p>
-      <div class="tags">
-        <span class="tag">Meta Ads</span><span class="tag">Google Ads</span>
-        <span class="tag">A/B Testing</span><span class="tag">Retargeting</span>
+    <div class="card">
+      <div class="card-type">Project</div>
+      <h3>Instagram Revamp — Skincare Brand</h3>
+      <p>Redesigned content strategy and visual aesthetic for a D2C brand. Grew followers by 42% in 3 months.</p>
+      <div class="card-tags">
+        <span class="ctag">Strategy</span>
+        <span class="ctag">Content</span>
+        <span class="ctag">Growth</span>
+      </div>
+      <a href="#" class="card-link">View case study →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-type">Project</div>
+      <h3>Gen Z Ad Campaign</h3>
+      <p>Conceptualised a full Meta Ads campaign for a fashion brand — audience segmentation, creative direction, and budget planning.</p>
+      <div class="card-tags">
+        <span class="ctag">Meta Ads</span>
+        <span class="ctag">Strategy</span>
+        <span class="ctag">Targeting</span>
+      </div>
+      <a href="#" class="card-link">View presentation →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-type">Skill</div>
+      <h3>Brand & Market Research</h3>
+      <p>Competitive analysis, audience profiling, and trend research to inform content and campaign decisions.</p>
+      <div class="card-tags">
+        <span class="ctag">Research</span>
+        <span class="ctag">Consumer Insights</span>
+        <span class="ctag">Competitive Analysis</span>
       </div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon-wrap icon-pink">💌</div>
-      <h3>Email Marketing</h3>
-      <p>Building nurture sequences and newsletters that people actually want to open.</p>
-      <div class="tags">
-        <span class="tag">Mailchimp</span><span class="tag">HubSpot</span>
-        <span class="tag">Automation</span><span class="tag">Segmentation</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon-wrap icon-lav">🌐</div>
-      <h3>Branding & Strategy</h3>
-      <p>Thinking about the big picture — brand voice, positioning, and what makes a business memorable.</p>
-      <div class="tags">
-        <span class="tag">Brand Identity</span><span class="tag">GTM Strategy</span>
-        <span class="tag">Market Research</span><span class="tag">Competitive Analysis</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section style="padding: 0 0 5.5rem; position:relative; z-index:1;">
-<div id="projects">
-  <div class="section-label">✦ Projects</div>
-  <h2 class="section-title">Work I'm proud of</h2>
-  <p class="section-desc">Real campaigns, case studies, and passion projects that show how I think.</p>
-
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-banner banner-pink">🌸</div>
-      <div class="project-body">
-        <div class="tags" style="margin-bottom:0.6rem"><span class="tag">Social Media</span><span class="tag">Content</span></div>
-        <h3>Bloom Skincare — Instagram Revamp</h3>
-        <p>Redesigned the entire Instagram content strategy for a D2C skincare brand. Grew follower count by 42% in 3 months through a consistent aesthetic & posting schedule.</p>
-        <div class="project-links">
-          <a href="#" class="plink">→ Case Study</a>
-          <a href="#" class="plink">→ View Deck</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-banner banner-lav">📈</div>
-      <div class="project-body">
-        <div class="tags" style="margin-bottom:0.6rem"><span class="tag">SEO</span><span class="tag">Analytics</span></div>
-        <h3>SEO Audit — Local Café Chain</h3>
-        <p>Conducted a full SEO audit and keyword strategy for a café chain. Improved organic search visibility by 60% in 6 weeks with on-page optimisation and local SEO.</p>
-        <div class="project-links">
-          <a href="#" class="plink">→ Case Study</a>
-          <a href="#" class="plink">→ View Report</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-banner banner-peach">🎯</div>
-      <div class="project-body">
-        <div class="tags" style="margin-bottom:0.6rem"><span class="tag">Meta Ads</span><span class="tag">Strategy</span></div>
-        <h3>Gen Z Ad Campaign — College Project</h3>
-        <p>Conceptualised and presented a full Meta Ads campaign targeting Gen Z consumers for a fashion brand, including audience segmentation, creative direction, and budget plan.</p>
-        <div class="project-links">
-          <a href="#" class="plink">→ View Presentation</a>
-        </div>
+    <div class="card">
+      <div class="card-type">Project</div>
+      <h3>College E-Cell — Marketing Head</h3>
+      <p>Grew Instagram from 800 to 3,000+ followers. Led event promotions, managed social content, and coordinated the team.</p>
+      <div class="card-tags">
+        <span class="ctag">Leadership</span>
+        <span class="ctag">Social Media</span>
+        <span class="ctag">Events</span>
       </div>
     </div>
   </div>
-</div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <div class="section-label">✦ Experience</div>
-  <h2 class="section-title">My journey so far</h2>
-  <p class="section-desc">Internships, college roles, and everything in between that shaped who I am as a marketer.</p>
+  <div class="section-header">
+    <div class="section-tag">Experience</div>
+    <h2>Where I've <em>worked</em></h2>
+  </div>
 
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-meta">
-        <div>
-          <h3>Digital Marketing Intern</h3>
-          <div class="tl-org">Marketing Agency, City</div>
-        </div>
-        <div class="tl-date">Jun 2024 – Present</div>
+  <div class="exp-list">
+    <div class="exp-item">
+      <div class="exp-date">Jun 2024 – Present</div>
+      <div>
+        <div class="exp-role">Digital Marketing Intern</div>
+        <div class="exp-org">Marketing Agency</div>
+        <div class="exp-desc">Managing social media and content for 5+ clients across fashion, lifestyle, and F&B. Creating content calendars and running paid campaigns.</div>
       </div>
-      <p>Managing social media accounts, creating content calendars, and running paid ad campaigns for 5+ clients across fashion, lifestyle, and F&B verticals.</p>
     </div>
 
-    <div class="tl-item">
-      <div class="tl-meta">
-        <div>
-          <h3>Content Marketing Intern</h3>
-          <div class="tl-org">D2C Startup</div>
-        </div>
-        <div class="tl-date">Jan 2024 – Apr 2024</div>
+    <div class="exp-item">
+      <div class="exp-date">Jan – Apr 2024</div>
+      <div>
+        <div class="exp-role">Content Marketing Intern</div>
+        <div class="exp-org">D2C Startup</div>
+        <div class="exp-desc">Wrote SEO blogs, drafted email newsletters, and produced Instagram carousels and reels in collaboration with the design team.</div>
       </div>
-      <p>Wrote blog content optimised for SEO, drafted email newsletters, and collaborated with the design team to produce Instagram carousels and reels.</p>
     </div>
 
-    <div class="tl-item">
-      <div class="tl-meta">
-        <div>
-          <h3>Marketing Head</h3>
-          <div class="tl-org">College Entrepreneurship Cell</div>
-        </div>
-        <div class="tl-date">2023 – 2024</div>
+    <div class="exp-item">
+      <div class="exp-date">2023 – 2024</div>
+      <div>
+        <div class="exp-role">Marketing Head</div>
+        <div class="exp-org">College Entrepreneurship Cell</div>
+        <div class="exp-desc">Led a team of 6, organised events, and grew the Instagram page from 800 to 3,000+ followers in one year.</div>
       </div>
-      <p>Led the marketing team for the college e-cell, organised events, and grew the Instagram page from 800 to 3,000+ followers in one year.</p>
     </div>
 
-    <div class="tl-item">
-      <div class="tl-meta">
-        <div>
-          <h3>BBA — Bachelor of Business Administration</h3>
-          <div class="tl-org">University Name, City</div>
-        </div>
-        <div class="tl-date">2022 – 2025</div>
+    <div class="exp-item">
+      <div class="exp-date">2022 – 2025</div>
+      <div>
+        <div class="exp-role">BBA — Bachelor of Business Administration</div>
+        <div class="exp-org">University Name</div>
+        <div class="exp-desc">Specialisation in Marketing. Coursework in Consumer Behaviour, Brand Management, Digital Marketing, and Business Strategy.</div>
       </div>
-      <p>Specialising in Marketing. Relevant coursework: Consumer Behaviour, Brand Management, Digital Marketing, Market Research, and Business Strategy.</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section style="padding: 0 0 5.5rem; position:relative; z-index:1;">
-<div id="contact">
-  <div class="section-label">✦ Contact</div>
-  <h2 class="section-title" style="text-align:center">Let's create something <span class="pink-text">beautiful</span></h2>
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-header">
+      <div class="section-tag">Contact</div>
+      <h2>Let's <em>connect</em></h2>
+    </div>
+    <p>Open to assistant roles, internships, and collaborations. Feel free to reach out.</p>
 
-  <div class="contact-card">
-    <p>Open to internships, collaborations, freelance projects, or just a good conversation about marketing and aesthetics.</p>
-
-    <div class="contact-options">
-      <a href="mailto:shreya@example.com" class="co">
-        <span class="co-icon">💌</span>
-        shreya@example.com
-        <span class="co-label">Email</span>
+    <div class="contact-links">
+      <a href="mailto:shreyamishraa@gmail.com" class="clink">
+        shreyamishraa@gmail.com
+        <span class="clink-label">Email</span>
       </a>
-      <a href="#" class="co">
-        <span class="co-icon">💼</span>
-        linkedin.com/in/shreya-mishra
-        <span class="co-label">LinkedIn</span>
+      <a href="https://www.linkedin.com/in/shreyamishraa24/" target="_blank" class="clink">
+        LinkedIn
+        <span class="clink-label">linkedin.com/in/shreyamishraa24</span>
       </a>
-      <a href="#" class="co">
-        <span class="co-icon">📸</span>
-        @shreya.creates
-        <span class="co-label">Instagram</span>
+      <a href="https://www.instagram.com/shreyamishraa24" target="_blank" class="clink">
+        Instagram
+        <span class="clink-label">@shreyamishraa24</span>
       </a>
     </div>
 
-    <a href="mailto:shreya@example.com" class="btn btn-primary" style="width:100%;justify-content:center;border-radius:14px;padding:1rem;">
-      Send Me a Message 💌
+    <a href="mailto:shreyamishraa@gmail.com" class="btn btn-fill" style="width:100%;text-align:center;display:block;border-radius:var(--radius);">
+      Send an Email
     </a>
   </div>
-</div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  Made with <span>♥</span> and lots of pink — Shreya Mishra · 2025
-</footer>
+<footer>Shreya Mishra · 2025</footer>
 
 <script>
   const observer = new IntersectionObserver(
@@ -809,13 +574,10 @@
     { threshold: 0.08 }
   );
 
-  const items = document.querySelectorAll(
-    '.skill-card, .project-card, .tl-item, .stat-box, .vcard, .fun-fact, .hero-card'
-  );
-  items.forEach((el, i) => {
+  document.querySelectorAll('.card, .exp-item, .info-block').forEach((el, i) => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(22px)';
-    el.style.transition = `opacity 0.5s ease ${i * 0.04}s, transform 0.5s ease ${i * 0.04}s`;
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = `opacity 0.45s ease ${i * 0.05}s, transform 0.45s ease ${i * 0.05}s`;
     observer.observe(el);
   });
 </script>
